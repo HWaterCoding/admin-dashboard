@@ -1,0 +1,75 @@
+:root{
+    --blue-theme-colour:rgb(21, 126, 175);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 5fr;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.nav{
+    background-color: rgb(240, 134, 134);
+    grid-column: 2/6;
+    grid-row: 1;
+}
+
+.sidebar{
+    background: var(--blue-theme-colour);
+    color: white;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: 1fr 3fr 4fr;
+}
+
+.sidebar > div > h1{
+    margin-left: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.sidebar > div > h1 > i{
+    font-size: 1.5rem;
+    width: 30px;
+    justify-self: center;
+}
+
+.sidebar .logo > h1{
+    font-size: 3rem;
+    border-bottom: 2px solid rgb(59, 53, 53);
+}
+
+.sidebar .logo > h1 i{
+    justify-self: start;
+    font-size: 3rem;
+}
+
+
+.main-content{
+    background-color: rgb(118, 187, 118);
+    grid-column: 2/6;
+
+}
+
+.main-content .card{
+    background-color: darkgray;
+}
+
+/* img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+} */
