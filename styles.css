@@ -1,5 +1,8 @@
+/* General Rules */
 :root{
-    --blue-theme-colour:rgb(21, 126, 175);
+    --blue-theme-colour:rgb(45, 150, 200);
+    --white-theme-colour: rgb(240, 240, 240);
+    --grey-theme-colour: rgb(197, 202, 209);
 }
 
 *, *::before, *::after {
@@ -19,12 +22,69 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Navigation Bar */
 .nav{
-    background-color: rgb(240, 134, 134);
+    background-color: var(--white-theme-colour);
     grid-column: 2/6;
     grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
+.nav1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    margin-left: 45px;
+    font-size: 1.3rem;
+}
+
+.nav1 input{
+    font-size: 1.3rem;
+    margin-left: 10px;
+    padding: 20px;
+    width: 70%;
+    height: 30px;
+    border-radius: 50px;
+    border: none; 
+    background-color: var(--grey-theme-colour);
+}
+
+.nav2{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.right-side-nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.buttons button{
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    background: var(--blue-theme-colour);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+/* Sidebar */
 .sidebar{
     background: var(--blue-theme-colour);
     color: white;
@@ -58,15 +118,15 @@ body {
     font-size: 3rem;
 }
 
-
+/* Main-Content */
 .main-content{
-    background-color: rgb(118, 187, 118);
+    background-color: var(--grey-theme-colour);
     grid-column: 2/6;
 
 }
 
 .main-content .card{
-    background-color: darkgray;
+    background-color: var(--white-theme-colour);
 }
 
 /* img, picture, video, canvas, svg {
