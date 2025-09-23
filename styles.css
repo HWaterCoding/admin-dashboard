@@ -20,6 +20,7 @@ body {
     grid-template-rows: 1fr 5fr;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    height: 100vh;
 }
 
 /* Navigation Bar */
@@ -29,13 +30,15 @@ body {
     grid-row: 1;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    box-shadow: 1px 5px 4px rgb(155, 155, 155);
+    z-index: 1;
 }
 
 .nav1{
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
-    margin-left: 45px;
+    margin-left: 250px;
     font-size: 1.3rem;
 }
 
@@ -46,8 +49,13 @@ body {
     width: 70%;
     height: 30px;
     border-radius: 50px;
-    border: none; 
+    border: none;
     background-color: var(--grey-theme-colour);
+}
+
+.nav1 input:focus{
+    outline: none;
+    border: 2px solid var(--blue-theme-colour);
 }
 
 .nav2{
@@ -78,7 +86,10 @@ body {
     border-radius: 50px;
 }
 
-
+.buttons button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 113, 165);
+}
 
 
 
@@ -118,16 +129,99 @@ body {
     font-size: 3rem;
 }
 
+
+
+
 /* Main-Content */
 .main-content{
     background-color: var(--grey-theme-colour);
     grid-column: 2/6;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 
 }
 
-.main-content .card{
+.grid1{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid1 h1{
+    margin: 30px 0 0 30px;
+}
+
+.card{
     background-color: var(--white-theme-colour);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-left: 20px solid rgb(134, 126, 126);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(121, 121, 121);
 }
+
+/* Add Hover Effect to cards to make them move slightly */
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.icons i{
+    font-size: 1.7rem;
+    padding: 10px;
+}
+
+.icons i:hover{
+    cursor: pointer;
+    color: #535151;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+    margin: 10px 30px 88px 30px;
+    flex: 1;
+}
+
+
+
+
+
+
+.grid2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 88px;
+}
+
+.announcements-grid,
+.trending-grid{
+    background-color: var(--white-theme-colour);
+    display: grid;
+    flex: 1;
+    margin: 10px 30px 0 0; 
+}
+
+.announcements-grid{
+    grid-template-rows: repeat(3, 1fr);
+    padding: 20px;
+}
+
+.announcements-grid div{
+    border-bottom: 2px solid grey;
+
+}
+
+.grid2 h1{
+    margin-top: 30px;
+}
+
 
 /* img, picture, video, canvas, svg {
   display: block;
